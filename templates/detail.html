@@ -8,10 +8,12 @@
 <body>
     
     <ul>
-        <li>{{object.username}}</li>
-        <li>{{object.email}}</li>
+        <li>{{data.username}}</li>
+        <li>{{data.email}}</li>
 
-        <a href="{% url 'update' object.pk %}">Edit</a>
+        <a href="{% url 'update' data.pk %}">Edit</a>
+        <a href="{% url 'delete' data.username %}">Delete</a>
+
 
     </ul>
 

@@ -8,11 +8,11 @@
 </head>
 <body>
 
-    <p>Are you sure that do you want delete {{person.name}}?</p>
+    <p>Are you sure that do you want delete <b>{{object.username}}</b>?</p>
 
     <form method="post">
         {%csrf_token%}
-        <button type="submit">delete</button>
+        <button type="submit" >delete</button>
     </form>
     
 </body>

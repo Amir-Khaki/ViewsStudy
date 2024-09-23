@@ -23,12 +23,23 @@ class HomeView(generic.ListView):
 class DetailView(generic.DetailView):
     model = User
     template_name = 'detail.html'
-   
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['data'] = context.get('object') 
+        '''
+            if you want just 'data' work it, 
+            you should use 'context.pop('object', None)' --> instead of 'context.get('object')' 
+        ''' 
+        return context
+
 
 class DeleteView(generic.DeleteView):
-    model = Person
+    model = User
     template_name = 'delete.html'
     success_url = reverse_lazy('home')
+    slug_url_kwarg = 'username' # we use of this for get name-query of our-database
+    slug_field = 'username' # set the name for 'urls.py'
 
 
 class UpdataView(generic.UpdateView):
