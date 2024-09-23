@@ -29,7 +29,8 @@ class DetailView(generic.DetailView):
         context['data'] = context.get('object') 
         '''
             if you want just 'data' work it, 
-            you should use 'context.pop('object', None)' --> instead of 'context.get('object')' 
+            you should use 'context.pop('object', None)'
+            --> instead of 'context.get('object')' 
         ''' 
         return context
 
@@ -58,7 +59,7 @@ class SignUp(generic.CreateView):
     template_name = 'signup.html'
     # success_url = reverse_lazy('home')
     initial = {
-        'username':'default-value-field'
+        'username':'default-value-field2'
         }
     
     def get_context_data(self, **kwargs):
