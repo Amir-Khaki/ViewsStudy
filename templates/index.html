@@ -11,7 +11,7 @@
     </div>
 
     <ul>
-        {% for item in latest_question_list %}
+        {% for item in person %}
             <li><a href="{% url 'detail' item.pk %}">{{item}}</a></li>
         {% endfor %}
     </ul>

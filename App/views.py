@@ -29,7 +29,7 @@ class DetailView(generic.DetailView):
         context['data'] = context.get('object') 
         '''
             if you want just 'data' work it, 
-            you should use 'context.pop('object', None)'
+            you should use 'context.pop('object', None)' 
             --> instead of 'context.get('object')' 
         ''' 
         return context
