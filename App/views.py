@@ -59,7 +59,7 @@ class SignUp(generic.CreateView):
     template_name = 'signup.html'
     # success_url = reverse_lazy('home')
     initial = {
-        'username':'default-value-field2'
+        'username':'default-value-field5'
         }
     
     def get_context_data(self, **kwargs):
